@@ -7,8 +7,9 @@ jobs:
     runs-on: ubuntu-latest
     steps:
     - uses: actions/checkout@v2.0.0
-    - uses: jsoref/spelling-action@master
+    - uses: jsoref/spelling-action@matcher-reporting
       env:
         bucket: https://raw.githubusercontent.com/jsoref/test-test
         project: spelling-data
         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        DEBUG: 1
